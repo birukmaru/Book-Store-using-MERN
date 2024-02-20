@@ -7,9 +7,13 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
-    
   },
   "keywords": [],
   "author": "BirukMaru",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.2"
+  }
 }
