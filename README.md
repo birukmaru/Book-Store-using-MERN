@@ -17,3 +17,9 @@ Node.js: A JavaScript runtime environment used for running the backend server.
 JWT (JSON Web Tokens): Used for user authentication and authorization.
 bcrypt.js: Used for hashing passwords securely.
 Bootstrap: A front-end framework for responsive and mobile-first web development.
+
+# To run
+install npm module "npm install"
+For backend "npm run dev"
+For frontend "npm run dev"
+
