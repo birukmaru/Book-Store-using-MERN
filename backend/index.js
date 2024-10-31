@@ -1,11 +1,12 @@
 import express from "express";
-import { PORT, mongoDBURL } from "./config.js";
+const app = require("./app");
 import mongoose from "mongoose";
 import { Book } from "./models/bookModel.js";
 import booksRoute from "./routes/booksRoute.js";
 import cors from "cors";
 
 const app = express();
+const port = 5000;
 
 // Middleware for parsing request body
 
@@ -19,16 +20,6 @@ app.get("/", (request, response) => {
 });
 
 app.use("/books", booksRoute);
-
-mongoose
-  .connect(mongoDBURL)
-  .then(() => {
-    console.log("App connected to database");
-    app.listen(PORT, () => {
-      console.log(`App is listening to port: ${PORT}`);
-    });
-  })
-
-  .catch((error) => {
-    console.log(error);
-  });
+app.listen(port, () => {
+  console.log(`Server Listening on port http://localhost:${port}`);
+});
